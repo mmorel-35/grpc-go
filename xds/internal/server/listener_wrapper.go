@@ -374,7 +374,7 @@ func (l *listenerWrapper) switchModeLocked(newMode connectivity.ServingMode, err
 	// serving", the callback must be provided error information, for
 	// debugging use by developers - A36.
 	if l.modeCallback != nil {
-		l.modeCallback(l.Listener.Addr(), newMode, err)
+		l.modeCallback(l.Addr(), newMode, err)
 	}
 }
 

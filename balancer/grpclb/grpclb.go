@@ -91,12 +91,12 @@ type balanceLoadClientStream struct {
 }
 
 func (x *balanceLoadClientStream) Send(m *lbpb.LoadBalanceRequest) error {
-	return x.ClientStream.SendMsg(m)
+	return x.SendMsg(m)
 }
 
 func (x *balanceLoadClientStream) Recv() (*lbpb.LoadBalanceResponse, error) {
 	m := new(lbpb.LoadBalanceResponse)
-	if err := x.ClientStream.RecvMsg(m); err != nil {
+	if err := x.RecvMsg(m); err != nil {
 		return nil, err
 	}
 	return m, nil

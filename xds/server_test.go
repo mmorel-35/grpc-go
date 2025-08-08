@@ -315,7 +315,7 @@ type fakeProvider struct {
 
 // Close helps implement the Provider interface.
 func (p *fakeProvider) Close() {
-	p.Distributor.Stop()
+	p.Stop()
 }
 
 func verifyCertProviderNotCreated() error {

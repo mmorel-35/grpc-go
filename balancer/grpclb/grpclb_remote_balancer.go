@@ -152,7 +152,7 @@ func (lb *lbBalancer) refreshSubConns(backendAddrs []resolver.Address, fallback 
 				delete(lb.subConns, scKey)
 				return
 			}
-			lb.cc.ClientConn.UpdateAddresses(sc, backendAddrs)
+			lb.cc.UpdateAddresses(sc, backendAddrs)
 			sc.Connect()
 			return
 		}
@@ -429,7 +429,7 @@ func (ccw *remoteBalancerCCWrapper) watchRemoteBalancer() {
 			}
 		}
 		// Trigger a re-resolve when the stream errors.
-		ccw.lb.cc.ClientConn.ResolveNow(resolver.ResolveNowOptions{})
+		ccw.lb.cc.ResolveNow(resolver.ResolveNowOptions{})
 
 		ccw.lb.mu.Lock()
 		ccw.lb.remoteBalancerConnected = false

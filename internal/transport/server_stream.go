@@ -53,7 +53,7 @@ type ServerStream struct {
 
 // Read reads an n byte message from the input stream.
 func (s *ServerStream) Read(n int) (mem.BufferSlice, error) {
-	b, err := s.Stream.read(n)
+	b, err := s.read(n)
 	if err == nil {
 		s.st.incrMsgRecv()
 	}
