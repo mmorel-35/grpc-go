@@ -6,7 +6,7 @@ require (
 	github.com/client9/misspell v0.3.4
 	github.com/mgechev/revive v1.11.0
 	golang.org/x/tools v0.35.0
-	google.golang.org/protobuf v1.36.6
+	google.golang.org/protobuf v1.36.7
 	honnef.co/go/tools v0.6.1
 )
 
