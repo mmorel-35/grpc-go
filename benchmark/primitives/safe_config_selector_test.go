@@ -64,6 +64,7 @@ func (s *safeUpdaterAtomicAndCounter) update(f func()) {
 		return
 	}
 	(*countingFunc)(oldCFPtr).mu.Lock()
+	//nolint:staticcheck // SA2001 necessary to unlock after locking to unblock any RLocks
 	(*countingFunc)(oldCFPtr).mu.Unlock() //lint:ignore SA2001 necessary to unlock after locking to unblock any RLocks
 }
 

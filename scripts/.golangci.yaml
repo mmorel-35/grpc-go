@@ -62,7 +62,6 @@ linters:
       checks:
         - all
         - -QF1008 # Omit embedded fields from selector expression
-        - -SA2001 # Empty critical section, did you mean to defer the unlock?
   exclusions:
     rules:
       # TODO(https://github.com/dominikh/go-tools/issues/54): Remove this once the issue is fixed in staticcheck.
