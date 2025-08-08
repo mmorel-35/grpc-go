@@ -1,6 +1,6 @@
 module google.golang.org/grpc
 
-go 1.23.0
+go 1.23.8
 
 require (
 	github.com/cespare/xxhash/v2 v2.3.0
@@ -12,7 +12,7 @@ require (
 	github.com/google/go-cmp v0.7.0
 	github.com/google/uuid v1.6.0
 	github.com/spiffe/go-spiffe/v2 v2.5.0
-	go.opentelemetry.io/contrib/detectors/gcp v1.36.0
+	go.opentelemetry.io/contrib/detectors/gcp v1.37.0
 	go.opentelemetry.io/otel v1.37.0
 	go.opentelemetry.io/otel/metric v1.37.0
 	go.opentelemetry.io/otel/sdk v1.37.0
