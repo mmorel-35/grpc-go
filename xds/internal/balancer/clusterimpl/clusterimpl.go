@@ -336,7 +336,7 @@ func (b *clusterImplBalancer) updateSubConnState(_ balancer.SubConn, s balancer.
 	// knows). The parent priority policy is configured to ignore re-resolution
 	// signal from the EDS children.
 	if s.ConnectivityState == connectivity.TransientFailure {
-		b.ClientConn.ResolveNow(resolver.ResolveNowOptions{})
+		b.ResolveNow(resolver.ResolveNowOptions{})
 	}
 
 	if cb != nil {

@@ -106,12 +106,12 @@ func (p *fakeProvider) Start(BuildOptions) Provider {
 // newKeyMaterial allows tests to push new key material to the fake provider
 // which will be made available to users of this provider.
 func (p *fakeProvider) newKeyMaterial(km *KeyMaterial, err error) {
-	p.Distributor.Set(km, err)
+	p.Set(km, err)
 }
 
 // Close helps implement the Provider interface.
 func (p *fakeProvider) Close() {
-	p.Distributor.Stop()
+	p.Stop()
 }
 
 // loadKeyMaterials is a helper to read cert/key files from testdata and convert

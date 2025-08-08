@@ -37,47 +37,47 @@ type LoggerWrapper struct {
 
 // Info logs to INFO log. Arguments are handled in the manner of fmt.Print.
 func (l *LoggerWrapper) Info(args ...any) {
-	l.Logger.Print(args...)
+	l.Print(args...)
 }
 
 // Infoln logs to INFO log. Arguments are handled in the manner of fmt.Println.
 func (l *LoggerWrapper) Infoln(args ...any) {
-	l.Logger.Println(args...)
+	l.Println(args...)
 }
 
 // Infof logs to INFO log. Arguments are handled in the manner of fmt.Printf.
 func (l *LoggerWrapper) Infof(format string, args ...any) {
-	l.Logger.Printf(format, args...)
+	l.Printf(format, args...)
 }
 
 // Warning logs to WARNING log. Arguments are handled in the manner of fmt.Print.
 func (l *LoggerWrapper) Warning(args ...any) {
-	l.Logger.Print(args...)
+	l.Print(args...)
 }
 
 // Warningln logs to WARNING log. Arguments are handled in the manner of fmt.Println.
 func (l *LoggerWrapper) Warningln(args ...any) {
-	l.Logger.Println(args...)
+	l.Println(args...)
 }
 
 // Warningf logs to WARNING log. Arguments are handled in the manner of fmt.Printf.
 func (l *LoggerWrapper) Warningf(format string, args ...any) {
-	l.Logger.Printf(format, args...)
+	l.Printf(format, args...)
 }
 
 // Error logs to ERROR log. Arguments are handled in the manner of fmt.Print.
 func (l *LoggerWrapper) Error(args ...any) {
-	l.Logger.Print(args...)
+	l.Print(args...)
 }
 
 // Errorln logs to ERROR log. Arguments are handled in the manner of fmt.Println.
 func (l *LoggerWrapper) Errorln(args ...any) {
-	l.Logger.Println(args...)
+	l.Println(args...)
 }
 
 // Errorf logs to ERROR log. Arguments are handled in the manner of fmt.Printf.
 func (l *LoggerWrapper) Errorf(format string, args ...any) {
-	l.Logger.Printf(format, args...)
+	l.Printf(format, args...)
 }
 
 // V reports whether verbosity level l is at least the requested verbose level.
