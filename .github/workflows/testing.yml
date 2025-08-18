@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Setup the environment.
       - name: Setup Go
@@ -85,7 +85,7 @@ jobs:
         run: echo "${{ matrix.grpcenv }}" >> $GITHUB_ENV
 
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Go
         uses: actions/setup-go@v5
