@@ -15,7 +15,7 @@ require (
 	google.golang.org/grpc v1.74.2
 	google.golang.org/grpc/gcp/observability v1.0.1
 	google.golang.org/grpc/security/advancedtls v1.0.0
-	google.golang.org/protobuf v1.36.6
+	google.golang.org/protobuf v1.36.8
 )
 
 require (
